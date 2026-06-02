@@ -1,0 +1,750 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    color:#222;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo img{
+    height:45px;
+}
+
+.menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.menu a{
+    text-decoration:none;
+    color:#000;
+    font-weight:500;
+}
+
+.hero-fullscreen {
+    height: 100vh;
+    min-height: 600px;
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230425/pngtree-set-of-red-and-black-power-cables-on-a-dark-background-image_2513225.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(10,30,47,0.7) 0%, rgba(124, 17, 17, 0.6) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 20px;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 32px;
+    opacity: 0.95;
+}
+
+.hero-btn {
+    background: #8c1f1f;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-btn:hover {
+    background: #630c0c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Раздел О нас */
+.about-section {
+    padding: 60px 0;
+    background: white;
+    scroll-margin-top: 70px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 280px;
+}
+
+.about-text p {
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #5c2c2c;
+}
+
+.about-list {
+    list-style: none;
+    margin-top: 16px;
+}
+
+.about-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #6e1f1f;
+}
+
+.about-stats {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    min-width: 240px;
+}
+
+.stat-item {
+    text-align: center;
+    background: #f0f6fa;
+    padding: 24px;
+    border-radius: 24px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #7c1111;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #7a4a4a;
+}
+
+/* Тарифная сетка */
+.pricing-section {
+    padding: 40px 0 60px;
+    scroll-margin-top: 90px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.section-sub {
+    text-align: center;
+    color: #7a4a4a;
+    max-width: 700px;
+    margin: 0 auto 48px;
+}
+
+.tariff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+
+.tariff-card {
+    background: white;
+    border-radius: 32px;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 340px;
+    padding: 28px 24px 32px;
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    border: 1px solid #e9f0f5;
+}
+
+.tariff-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 40px -16px rgba(0,0,0,0.12);
+}
+
+.tariff-name {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #360c0c;
+}
+
+.price {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #7c1111;
+    margin: 16px 0 8px;
+}
+
+.price small {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #966262;
+}
+
+.speed-detail {
+    background: #f0f6fa;
+    padding: 12px;
+    border-radius: 24px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+.speed-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #cbdde9;
+}
+
+.badge {
+    background: #eef2ff;
+    color: #8c1f1f;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.tech-note {
+    font-size: 0.75rem;
+    color: #a06464;
+    margin-top: 12px;
+    border-top: 1px solid #ecf3f8;
+    padding-top: 14px;
+}
+
+.btn-order {
+    width: 100%;
+    background: #7c1111;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 40px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-order:hover {
+    background: #630c0c;
+}
+
+.additional {
+    margin-top: 48px;
+    background: #eef3f7;
+    padding: 24px;
+    border-radius: 28px;
+    font-size: 0.9rem;
+}
+
+/* Услуги */
+.services {
+    padding: 40px 0 60px;
+    background: #ffffff;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.service-item {
+    background: #f9fdfe;
+    border-radius: 28px;
+    padding: 28px 20px;
+    flex: 1;
+    min-width: 220px;
+    text-align: center;
+    box-shadow: 0 6px 12px -10px rgba(0,0,0,0.05);
+    border: 1px solid #e2edf2;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+}
+
+.service-item h3 {
+    font-size: 1.7rem;
+    margin: 12px 0;
+}
+
+/* Поддержка */
+.support-section {
+    padding: 40px 0 60px;
+    background: linear-gradient(135deg, #f0f7fa 0%, #ffffff 100%);
+    scroll-margin-top: 90px;
+}
+
+.support-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.support-card {
+    background: white;
+    border-radius: 28px;
+    padding: 32px 24px;
+    flex: 1;
+    min-width: 240px;
+    max-width: 280px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #e0edf2;
+}
+
+.support-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.support-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.support-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+    color: #3b0a0a;
+}
+
+.support-phone, .support-email {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #7c1111;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.support-phone:hover, .support-email:hover {
+    text-decoration: underline;
+}
+
+.btn-chat, .btn-lk {
+    background: #7c1111;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 12px;
+}
+
+.btn-chat:hover, .btn-lk:hover {
+    background: #630c0c;
+}
+
+.support-card p {
+    font-size: 0.85rem;
+    color: #a36b6b;
+}
+
+/* FAQ */
+.faq-block {
+    background: white;
+    border-radius: 28px;
+    padding: 32px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.faq-block h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #3b0a0a;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e2edf2;
+    padding-bottom: 12px;
+}
+
+.faq-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6e1f1f;
+    cursor: pointer;
+    padding: 12px 0;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #7c1111;
+}
+
+.faq-answer {
+    font-size: 0.9rem;
+    color: #7a4a4a;
+    padding: 0 0 12px 0;
+    display: none;
+    line-height: 1.5;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Оплата */
+.payment-info {
+    background: #fcfcfc;
+    color: rgb(0, 0, 0);
+    border-radius: 36px;
+    padding: 120px 50px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.payment-info h2 {
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+}
+
+.footer {
+    text-align: center;
+    padding: 32px 0;
+    border-top: 1px solid #dce7ef;
+    font-size: 0.85rem;
+    color: #8c4f4f;
+}
+
+/* Адаптивность */
+@media (max-width: 700px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .nav {
+        flex-direction: column;
+    }
+    .tariff-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .support-card {
+        max-width: 100%;
+    }
+    .faq-block {
+        padding: 20px;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .hero-fullscreen {
+        background-attachment: scroll;
+    }
+}
+.footer {
+    background: #3b3c3e;
+    color: #a8c4d8;
+    padding: 48px 0 24px;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    min-width: 200px;
+}
+
+.footer-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #712727;
+    display: inline-block;
+}
+
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-bottom: 12px;
+}
+
+.footer-menu a {
+    color: #d8a8a8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-menu a:hover {
+    color: #8c1f1f;
+}
+
+.footer-contacts {
+    list-style: none;
+}
+
+.footer-contacts li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d8a8a8;
+}
+
+.footer-contacts a {
+    color: #d8a8a8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-contacts a:hover {
+    color: #8c1f1f;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid #4a1e1e;
+    font-size: 0.8rem;
+    color: #a36b6b;
+}
+
+@media (max-width: 700px) {
+    .footer-grid {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+/* ========== ШАПКА (ваша структура) ========== */
+.header {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Логотип */
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* Навигация */
+nav {
+    flex: 1;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu li a:hover {
+    color: #1f7a8c;
+}
+
+/* Кнопка телефона */
+.btn-outline {
+    background: transparent;
+    border: 2px solid #1f7a8c;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #1f7a8c;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn-outline:hover {
+    background: #1f7a8c;
+    color: white;
+}
+
+/* Кнопка бургера (скрыта на десктопе) */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    padding: 5px 10px;
+}
+
+/* ========== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ========== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    
+    /* Показываем бургер */
+    .mobile-menu-btn {
+        display: block;
+        order: 2;
+    }
+    
+    .logo {
+        order: 1;
+        flex: 1;
+    }
+    
+    .btn-outline {
+        order: 3;
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    /* Меню — скрыто по умолчанию */
+    nav {
+        order: 4;
+        width: 100%;
+        display: none;
+    }
+    
+    /* Меню — открыто */
+    nav.show {
+        display: block;
+    }
+    
+    .menu {
+        flex-direction: column;
+        gap: 0;
+        margin-top: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .menu li {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .menu li:last-child {
+        border-bottom: none;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 14px 20px;
+        text-align: center;
+    }
+}

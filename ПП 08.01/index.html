@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АЛЬТ - Интернет провайдер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Шапка -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <img src="/iamges/ALT_logo_v1_109x64.png" alt="ALT">
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#pricing">Тарифы</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#support">Поддержка</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>  
+    </div>
+</header>
+
+    <!-- Первый экран -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Интернет для дома и бизнеса</h1>
+            <p>Надежный провайдер в Астрахани с 1998 года</p>
+
+            <a href="#about" class="hero-btn">
+                О компании
+            </a>
+        </div>
+    </section>
+
+   <!-- Полноэкранный блок с картинкой и кнопкой -->
+<section class="hero-fullscreen">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Стабильный интернет<br>для дома и бизнеса</h1>
+        <p>Высокие скорости, круглосуточная поддержка, честные тарифы</p>
+        <button class="hero-btn" id="aboutBtn">Узнать о компании</button>
+    </div>
+</section>
+
+<main>
+    <!-- Раздел О нас -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">О компании «Альт»</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ООО «Альт» — надежный интернет-провайдер, предоставляющий качественные услуги связи с 2010 года. Мы обеспечиваем стабильный доступ в интернет для тысяч домохозяйств и предприятий.</p>
+                    <p>Наша миссия — делать интернет доступным, быстрым и надежным для каждого клиента. Мы используем современное оборудование и постоянно модернизируем сеть.</p>
+                    <p><strong>Наши преимущества:</strong></p>
+                    <ul class="about-list">
+                        <li>✓ Высокая скорость до 600 Мбит/с</li>
+                        <li>✓ Бесплатный внутренний трафик</li>
+                        <li>✓ Круглосуточная техническая поддержка</li>
+                        <li>✓ Удобные способы оплаты без комиссии</li>
+                        <li>✓ Индивидуальный подход к каждому клиенту</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">лет на рынке</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50 000+</div>
+                        <div class="stat-label">довольных клиентов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">техподдержка</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок тарифов (pricing table) -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Безлимитные тарифы</h2>
+            <div class="section-sub">
+                При подключении — внутренний статический IP-адрес (NAT). 
+                Внешний статический IP — всего <strong>330 ₽/мес</strong> дополнительно*
+            </div>
+
+            <div class="tariff-grid">
+                <!-- Тариф 100/200 -->
+                <div class="tariff-card">
+                    <div class="badge"> Для дома</div>
+                    <div class="tariff-name">ФЛ-2025 Старт</div>
+                    <div class="price">900 ₽ <small>/мес</small></div>
+                    <div class="speed-detail">
+                        <div class="speed-line"><span>12:00 – 00:00</span> <strong>до 100 Мбит/с</strong></div>
+                        <div class="speed-line"><span>00:00 – 12:00</span> <strong>до 200 Мбит/с</strong></div>
+                    </div>
+                    <div class="tech-note">✓ Внутренний IP-адрес<br>✓ Техподдержка 24/7</div>
+                    <button class="btn-order" data-tariff="ФЛ-2025 Старт, 900₽">Подключить</button>
+                </div>
+
+                <!-- Тариф 250/600 -->
+                <div class="tariff-card">
+                    <div class="badge"> GEPON / Высокая скорость</div>
+                    <div class="tariff-name">ФЛ-2025 Turbo</div>
+                    <div class="price">990 ₽ <small>/мес</small></div>
+                    <div class="speed-detail">
+                        <div class="speed-line"><span> 12:00 – 00:00</span> <strong>до 250 Мбит/с</strong></div>
+                        <div class="speed-line"><span> 00:00 – 12:00</span> <strong>до 600 Мбит/с</strong></div>
+                    </div>
+                    <div class="tech-note"> Доступен при технологии GEPON<br>📡 Роутер с гигабитным портом</div>
+                    <button class="btn-order" data-tariff="ФЛ-2025 Turbo, 990₽">Выбрать тариф</button>
+                </div>
+
+                <!-- Тариф 500 круглосуточно -->
+                <div class="tariff-card">
+                    <div class="badge"> Без разделения</div>
+                    <div class="tariff-name">ФЛ-2025 Максимум</div>
+                    <div class="price">1 300 ₽ <small>/мес</small></div>
+                    <div class="speed-detail">
+                        <div class="speed-line"><span> Круглосуточно</span> <strong>до 500 Мбит/с</strong></div>
+                    </div>
+                    <div class="tech-note">*Для скорости выше 100 Мбит/с нужен роутер с WAN 1 Гбит/с.<br>Технология GEPON</div>
+                    <button class="btn-order" data-tariff="ФЛ-2025 Максимум, 1300₽">Заказать</button>
+                </div>
+            </div>
+
+            <!-- Доп. информация -->
+            <div class="additional">
+                <p> <strong>Внимание!</strong> Изменение тарифов с 01.01.2025 в связи с расходами на коммунальное обслуживание и ФЗ №374.  
+                Стоимость услуги "Внешний статический IP-адрес" — 330 ₽/мес.</p>
+                <p> Для получения скорости выше 100 Мбит/с необходимо иметь роутер со скоростью WAN-порта от 1000 Мбит/с (1 Гбит/с).<br>
+                В стоимость тарифа входит абонентская плата за доступ в Интернет и обслуживание линии до оборудования оператора.</p>
+                <p> Подробности в <strong>Личном кабинете</strong> или по телефону <strong>+7(8512)26-25-26</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Наши услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <h3>Интернет</h3>
+                    <p>Корпоративные сети, высокая скорость обмена, бесплатный внутренний трафик.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <h3>Телефония</h3>
+                    <p>Городские номера, междугородние вызовы, внутренние и красивые номера.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"></div>
+                    <h3>Видеонаблюдение</h3>
+                    <p>IP-видеонаблюдение и IP-видеодомофоны под ключ.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел поддержки -->
+    <section class="support-section" id="support">
+        <div class="container">
+            <h2 class="section-title">Техническая поддержка</h2>
+            <div class="section-sub">
+                Мы рядом, когда вы нуждаетесь в помощи. Круглосуточно, без выходных.
+            </div>
+            
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon"></div>
+                    <h3>Телефон горячей линии</h3>
+                    <a href="tel:+78512262526" class="support-phone">+7 (8512) 26-25-26</a>
+                    <p>Круглосуточно, без выходных</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon"></div>
+                    <h3>Онлайн-чат</h3>
+                    <button class="btn-chat" id="chatBtn">Открыть чат</button>
+                    <p>Время ответа: до 2 минут</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon"></div>
+                    <h3>E-mail поддержка</h3>
+                    <a href="mailto:support@alt30.ru" class="support-email">support@alt30.ru</a>
+                    <p>Ответ в течение 1 часа</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="support-icon"></div>
+                    <h3>Личный кабинет</h3>
+                    <button class="btn-lk" id="lkBtn">Войти в кабинет</button>
+                    <p>Проверка баланса, смена тарифа, заявки</p>
+                </div>
+            </div>
+            
+            <div class="faq-block">
+                <h3>Часто задаваемые вопросы</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">❓ Как узнать задолженность?</div>
+                        <div class="faq-answer">В личном кабинете или по телефону поддержки. Также вы можете отправить запрос на e-mail.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ Что делать при низкой скорости?</div>
+                        <div class="faq-answer">Проверьте тариф, роутер и подключение. Если проблема не решена — обратитесь в поддержку.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ Как сменить тариф?</div>
+                        <div class="faq-answer">Через личный кабинет или оставив заявку оператору по телефону.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ Нужен ли роутер для подключения?</div>
+                        <div class="faq-answer">Да, для скоростей выше 100 Мбит/с нужен гигабитный роутер. Можете приобрести у нас.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Оплата -->
+    <div class="container" id="payment">
+        <div class="payment-info">
+            <h2> Удобная оплата без комиссии</h2>
+            <p style="margin-bottom: 16px; opacity: 0.9;">Сбербанк онлайн, отделения и банкоматы ПАО «Сбербанк».  
+            Мгновенное зачисление средств.</p>
+            <p style="font-weight: 600; background: #1f7a8c30; display: inline-block; padding: 6px 18px; border-radius: 300px;">🔹 Доверительный платеж бесплатно (1 раз в 30 дней)</p>
+        </div>
+    </div>
+
+   
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Меню -->
+            <div class="footer-col">
+                <h3 class="footer-title">МЕНЮ</h3>
+                <ul class="footer-menu">
+                    <li><a href="#pricing">Тарифы</a></li>
+                    <li><a href="#connection">Подключение</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#payment">Оплата</a></li>
+                    <li><a href="#support">Техподдержка</a></li>
+                    <li><a href="#about">О компании</a></li>
+                </ul>
+            </div>
+
+            <!-- Контакты -->
+            <div class="footer-col">
+                <h3 class="footer-title">КОНТАКТЫ</h3>
+                <ul class="footer-contacts">
+                    <li> г. Астрахань, ул. Победы 53, офис 805, 8 этаж</li>
+                    <li> <a href="tel:+78512262526">+7 (8512) 26-25-26</a></li>
+                    <li> <a href="mailto:mail@alt30.ru">mail@alt30.ru</a></li>
+                    <li> alt30.ru</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="footer-copyright">
+            © 1998-2026
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
